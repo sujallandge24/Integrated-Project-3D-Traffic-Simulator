@@ -1,11 +1,9 @@
-// CityGrid.h
 #ifndef CITY_GRID_H
 #define CITY_GRID_H
 
-const int ROWS = 10;
-const int COLS = 10;
+const int ROWS = 12;
+const int COLS = 12;
 
-// 0 = Empty, 1 = Road, 2 = Intersection
 class CityGrid {
 private:
     int grid[ROWS][COLS];
@@ -13,9 +11,11 @@ private:
 public:
     CityGrid();
     void initializeGrid();
-    void displayGrid();
-    int getCell(int row, int col);
+    void displayGrid() const;
+    int getCell(int row, int col) const;
     void setCell(int row, int col, int value);
+    bool isRoad(int row, int col) const;
+    bool isIntersection(int row, int col) const;
 };
 
 #endif

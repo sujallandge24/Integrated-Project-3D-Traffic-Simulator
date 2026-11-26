@@ -1,4 +1,3 @@
-// Bus.h
 #ifndef BUS_H
 #define BUS_H
 
@@ -8,6 +7,7 @@ class Bus : public Vehicle {
 public:
     Bus(int id, float x, float y, float speed = 1.5f);
     void move() override;
+    void specialBehavior() override;
 };
 
 #endif
